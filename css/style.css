@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#home{ background: #0d0f1b; padding-top: 100px; }
+
+.intro{
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(160, 155, 155);
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+   padding-top:90px;
+    min-height: 100vh;
+    overflow: visible;
+   
+}
+
+.ul{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.ul .li{
+    list-style: none;
+}
+
+.ul .li:before{
+    content: attr(data-text);
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: rgba(255, 255, 255, 0.781);
+    font-size: 6em;
+    font-weight: 700;
+    pointer-events: none;
+    opacity: 0;
+    letter-spacing: 20px;
+    transition: .5s;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.ul .li:hover:before{
+    opacity: .08;
+    letter-spacing: 20px;
+}
+
+.ul .li a{
+    position: relative;
+    display: inline-block;
+    padding: 6px 15px;
+    text-decoration: none;
+    background: #06365e;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    overflow: hidden;
+    transition: .5s;
+    z-index: 1;
+}
+
+.ul .li a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100px;
+    width: 80px;
+    height: 100%;
+    transition: 0s;
+}
+
+.ul:hover .li a{
+    opacity: 0;
+}
+
+.ul .li a:hover{
+    transform: scale(1.4);
+    z-index: 1000;
+    background: #ff3f81;
+    opacity: 1;
+    
+}
+
+.ul .li a:hover:before{
+    left: calc(100% + 100px);
+    transition: .5s;
+    transition-delay: .2s;
+}
+#nav{
+    position: sticky;
+    z-index: 10; 
+    top: 0;
+    height: 50px;
+}
+.nav-link{
+    font-size: 20px;
+    margin-left: 35px;
+    color:#0d0f1b !important;
+    transition: background-color 1s;
+    text-transform: uppercase;
+}
+
+.nav-link:hover{
+    background-color: #0d0f1b;
+    color: #fff !important;
+    box-shadow: black;
+}
+
+
+#about{
+    padding: 50px 30px ;
+}
+
+.heading{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 40px;
+    margin: 0 0 40px ;
+}
+.heading::after{
+    content: '';
+    display: block;
+    background-color: #06365e;
+    height: 1px;
+    width: 150px;
+    margin: 0 auto;
+    margin-top: 20px;
+   
+}
+.des{
+    text-align: center;
+}
